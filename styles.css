@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #c9e4f5; /* Light blue background color */
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.shifts {
+  margin-top: 20px;
+  text-align: center; /* Center the button and schedule */
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#generateBtn {
+  background-color: #6ca6d1; /* Lighter blue button color */
+}
+
+#generateBtn:hover {
+  background-color: #478eb3; /* Darker color on hover */
+}
+
+#clockInBtn,
+#clockOutBtn {
+  background-color: #6ca6d1; /* Lighter blue button color */
+}
+
+#clockInBtn:hover,
+#clockOutBtn:hover {
+  background-color: #478eb3; /* Darker color on hover */
+}
+
+#schedule {
+  margin-top: 20px;
+  text-align: left;
+}
+
+#schedule h3 {
+  margin: 10px 0;
+}
+
+#schedule ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#schedule li {
+  margin-bottom: 5px;
+}
+
+.clock {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#clockTimes {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #478eb3; /* Darker color on hover */
+}
+
+#schedule {
+  margin-top: 20px;
+  text-align: left;
+}
+
+#schedule h3 {
+  margin: 10px 0;
+}
+
+#schedule ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#schedule li {
+  margin-bottom: 5px;
+}
