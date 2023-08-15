@@ -14,9 +14,11 @@ class Employee {
 }
 
 class Shift {
-  constructor(dayOfWeek, startTime, endTime) {
+  constructor(dayOfWeek, startTime, lunchStart, lunchEnd, endTime) {
     this.dayOfWeek = dayOfWeek;
     this.startTime = startTime;
+    this.lunchStart = lunchStart;
+    this.lunchEnd = lunchEnd;
     this.endTime = endTime;
   }
 }
@@ -42,11 +44,11 @@ generateBtn.addEventListener("click", () => {
   const workdays = getRandomWorkdays(5);
 
   const shifts = [
-    new Shift(workdays[0], "12:00 PM", "06:00 PM"),
-    new Shift(workdays[1], "01:00 PM", "07:00 PM"),
-    new Shift(workdays[2], "02:00 PM", "08:00 PM"),
-    new Shift(workdays[3], "12:00 PM", "06:00 PM"),
-    new Shift(workdays[4], "01:00 PM", "07:00 PM"),
+    new Shift(workdays[0], "12:00 PM", "02:00 PM", "02:30 PM", "06:00 PM"),
+    new Shift(workdays[1], "01:00 PM", "03:00 PM", "03:30 PM", "07:00 PM"),
+    new Shift(workdays[2], "02:00 PM", "04:00 PM", "04:30 PM", "08:00 PM"),
+    new Shift(workdays[3], "12:00 PM", "02:00 PM", "02:30 PM", "06:00 PM"),
+    new Shift(workdays[4], "01:00 PM", "03:00 PM", "03:30 PM", "07:00 PM"),
   ];
 
   let scheduleHtml = "<h2>Schedule</h2>";
@@ -57,7 +59,7 @@ generateBtn.addEventListener("click", () => {
       scheduleHtml += `<h3>${day}</h3>`;
       scheduleHtml += "<ul>";
       dayShifts.forEach((shift) => {
-        scheduleHtml += `<li>${shift.startTime} - ${shift.endTime}</li>`;
+        scheduleHtml += `<li>${shift.startTime} - ${shift.lunchStart} (Lunch) - ${shift.lunchEnd} - ${shift.endTime}</li>`;
       });
       scheduleHtml += "</ul>";
     }
